@@ -33,7 +33,8 @@ WORKDIR /work
 RUN mkdir -p /work/simket
 RUN jupyter notebook --generate-config
 
-# Checkout repo
+# Checkout repos
 RUN git clone https://github.com/PyHDI/Pyverilog.git
+RUN git clone https://github.com/myhdl/myhdl.git
 
 ENTRYPOINT ["jupyter", "notebook", "--ip=0.0.0.0", "--no-browser", "--allow-root"]
