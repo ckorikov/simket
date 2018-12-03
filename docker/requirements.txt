@@ -1,0 +1,9 @@
+numpy
+scipy
+matplotlib
+pytest
+pylint
+pygraphviz
+ipykernel
+jupyter
+Cython

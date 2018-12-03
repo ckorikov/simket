@@ -8,6 +8,6 @@ services:
       dockerfile: Dockerfile
     image: simket
     volumes:
-        - ..:/work/simket
+        - ..:/app/simket
     ports:
         - "8888:8888"
