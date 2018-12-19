@@ -1,3 +1,6 @@
+
+from myhdl import *
+
 {% for definition in definitions %}
 {{ definition }}
 {% endfor %}

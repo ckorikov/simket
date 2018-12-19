@@ -1,5 +1,2 @@
-casex({{ comp }})
-{%- for case in caselist %}
-{{ case }}
-{%- endfor %}
-endcase
+{% for case in caselist %}
+if {{comp}}   =={{cond}}{{ case }}{% endfor %}

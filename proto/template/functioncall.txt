@@ -1,1 +1,1 @@
-{{ name }}({% for arg in args %}{{ arg }}{% if loop.index < len_args %}, {% endif %}{% endfor %})
+{{ name }}{% for arg in args %}{% if loop.index < len_args %}, {% endif %}{% endfor %}

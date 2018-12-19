@@ -1,4 +1,1 @@
-
-generate {% for item in items %}{{ item }}{% endfor %}
-endgenerate
-
+{% for item in items %}{{ item }}{% endfor %}

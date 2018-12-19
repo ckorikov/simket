@@ -1,1 +1,1 @@
-#{{ delay }}
+delay({{delay}})

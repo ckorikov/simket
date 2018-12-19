@@ -1,1 +1,1 @@
-forever {{ statement }}
+while 1>0: {{ statement }}

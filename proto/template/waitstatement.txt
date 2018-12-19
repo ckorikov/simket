@@ -1,1 +1,2 @@
-wait({{ cond }}){% if statement != '' %} {{ statement }}{% else %};{% endif %}
+yield {{ cond }}{% if statement != '' %} 
+{{ statement }}{% else %}{% endif %}

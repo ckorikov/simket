@@ -2,6 +2,7 @@ from __future__ import absolute_import
 from __future__ import print_function
 import sys
 import os
+from optparse import OptionParser
 
 # the next line can be removed after installation
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -1025,7 +1026,13 @@ class VProc(ConvertVisitor):
 
 
 def main():
-    filelist=["../../Pyverilog/verilogcode/count.v"]
+    
+    optparser = OptionParser()
+    (options, args) = optparser.parse_args()
+    
+    filelist = args
+    
+    #filelist=["../../Pyverilog/verilogcode/count.v"]
 
     codeparser = VerilogCodeParser(filelist)
 
@@ -1034,6 +1041,18 @@ def main():
 
     codegen = VProc()
     rslt = codegen.visit(ast)
+    rslt = rslt.replace("      "," ")
+    rslt = rslt.replace(" if","if")
+    rslt = rslt.replace(" if","if")
+    rslt = rslt.replace(" else","else")
+    rslt = rslt.replace(" else","else")
+    rslt = rslt.replace("  ","")
+    rslt = rslt.replace("RST_X = Signal","RST_X = ResetSignal")
+    #rslt = rslt.replace("RST_X = Signal()","RST_X = ResetSignal(bool(0),active=0,async=True)")
+    #rslt = rslt.replace(":",":\n ")
+
+
+    
     print(rslt)
 
     # proc = VProc("TOP", terms, binddict, resolved_terms, resolved_binddict, constlist)

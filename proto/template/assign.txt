@@ -1,1 +1,1 @@
-assign {{ left }} = {{ right }};
+{{ left }}.next == {{ right }}

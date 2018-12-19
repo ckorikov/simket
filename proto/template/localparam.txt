@@ -1,1 +1,2 @@
-localparam {% if signed %}signed {% endif %}{% if width != '' %}{{ width }} {% endif %}{{ name }} = {{ value }};
+{%- for item in items -%}
+{%- endfor -%}
