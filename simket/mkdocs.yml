@@ -1,0 +1,17 @@
+site_name: Simket
+nav: 
+    - Home: 'index.md'
+    - User Guide:
+           - 'Commands': 'Commands.md'
+           - 'Project layout': 'project layout.md'
+    - About:
+           - 'About': 'about.md'
+           - 'Release Notes': 'release-notes.md'
+theme: 
+    name: 'material'
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - rust
+
+
